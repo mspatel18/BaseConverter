@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Base Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="whole">
+      <div>
+        <input id="txtNumber" type="text" placeholder="Number" />
+      </div>
+      <div class="custom-select">
+        <select name="Base" id="txtFromBase">
+          <!-- onmouseover="JSDropDown()" onmouseout="this.size=1;" -->
+          <option value="" selected="selected">From</option>
+          <option value="10">(10) Decimal</option>
+          <option value="2">(2) Binary</option>
+          <option value="8">(8) Octal</option>
+          <option value="16">(16) Hex</option>
+        </select>
+        <span class="custom-arrow"></span>
+      </div>
+      <div class="custom-select">
+        <select name="To" id="txtToBase">
+          <option selected="selected">To</option>
+          <option value="10">(10) Decimal</option>
+          <option value="2">(2) Binary</option>
+          <option value="8">(8) Octal</option>
+          <option value="16">(16) Hex</option>
+        </select>
+        <span class="custom-arrow"></span>
+      </div>
+      <div class="subbtn">
+        <button
+          type="button"  class="btn41-43 btn-41"
+          onclick='changeBase(document.getElementById("txtNumber").value, document.getElementById("txtFromBase").value,  document.getElementById("txtToBase").value)'
+        >
+          = Convert
+        </button>
+      </div>
+      <div id="lblResult">Result</div>
+    </div>
+  </body>
+</html>
