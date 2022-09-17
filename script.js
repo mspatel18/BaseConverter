@@ -3,8 +3,10 @@ let fromBase = document.getElementById("txtFromBase");
 let toBase = document.getElementById("txtToBase");
 
 function changeBase(number, fromBase, toBase) {    
-        let numberInDecimal = parseInt(number, fromBase);
-        document.getElementById("lblResult").innerHTML = (parseFloat(numberInDecimal).toString(toBase)).toUpperCase();
+        let numberInDecimal = parseFloat(number, fromBase);
+        const x = (parseFloat(numberInDecimal).toString(toBase)).toUpperCase();
+        const y = x.split(".");
+        document.getElementById("lblResult").innerHTML = y[0]+ "."+ y[1].slice(0,20);
     
 }
 function reset( ){
