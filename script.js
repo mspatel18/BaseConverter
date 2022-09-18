@@ -2,15 +2,11 @@ let number = document.getElementById("txtNumber");
 let fromBase = document.getElementById("txtFromBase");
 let toBase = document.getElementById("txtToBase");
 
-function changeBase(number, fromBase, toBase) {    
-//         let numberInDecimal = parseFloat(number, fromBase);
-//         const x = (parseFloat(numberInDecimal).toString(toBase)).toUpperCase();
-//         const y = x.split(".");
-//         document.getElementById("lblResult").innerHTML = y[0]+ "."+ y[1].slice(0,20);
-        let numberInDecimal = parseInt(number, fromBase);
-        document.getElementById("lblResult").innerHTML = (parseFloat(numberInDecimal).toString(toBase)).toUpperCase();
-    
-}
+function changeBase(number, fromBase, toBase) {
+        let num = Base(number,fromBase);
+
+        document.getElementById("lblResult").innerHTML = num.toBase(toBase).valueOf(); 
+    }
 function reset( ){
     document.getElementById("txtNumber").value = "";
     document.getElementById("txtFromBase").value="";
