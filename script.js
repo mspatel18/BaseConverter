@@ -5,7 +5,7 @@ let toBase = document.getElementById("txtToBase");
 function changeBase(number, fromBase, toBase) {
         let num = Base(number,fromBase);
 
-        document.getElementById("lblResult").innerHTML = num.toBase(toBase).valueOf(); 
+        document.getElementById("lblResult").innerHTML = num.toBase(toBase).valueOf().toUpperCase(); 
     }
 function reset( ){
     document.getElementById("txtNumber").value = "";
